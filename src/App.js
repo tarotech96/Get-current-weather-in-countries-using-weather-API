@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Weather from './component/Weather';
 import Form from './component/Form';
 const API_key = '88b4b25038244d071f187242bdc98206';
-const URL = 'https://api.openweathermap.org/data/2.5/';
+const URL = 'http://api.openweathermap.org/data/2.5/';
 class App extends React.Component {
   constructor(props) {
     super(props);
