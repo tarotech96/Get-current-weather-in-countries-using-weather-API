@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  margin: 30px 0 0 100px!important;
+}
+
+.cards {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: 800;
+  box-shadow: 20px 20px 50px 10px #85D6C7 inset;
+  border-radius: 10px;
+}
+
+.form {
+  margin-left: 150px;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.city {
+  color: #E4BB2A;
+  font-size: 2.5em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 600;
+}
+
+h4 {
+  color: #E4BB2A!important;
+}
+
+.mr-10 {
+  margin: 35px 0 0 -10px;
+  color: white!important;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.mr-20 {
+  font-size: 1.5em;
+  color: #DEE21D;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+input {
+  text-align: center!important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
