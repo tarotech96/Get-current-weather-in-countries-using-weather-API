@@ -36,7 +36,7 @@ class Form extends React.Component {
 
     formSubmit = () => {
         return (
-            <div className="form">
+            <div className="form myform">
                 <div>{this.props.error ? error() : null}</div>
                 <div className="row">
                     <div className="col-md-3">
@@ -48,7 +48,7 @@ class Form extends React.Component {
                         <input type="text" className="form-control" name="country" placeholder="Country" autoComplete="off" onChange={this.onChangeValue} />
                     </div>
                     <div className="col-md-3">
-                        <button className="btn btn-warning mr-10" onClick={this.submitForm}>Get Weather</button>
+                        <button className="btn btn-warning mr-10" onClick={this.submitForm} >Get Weather</button>
                     </div>
                 </div>
             </div>
@@ -57,10 +57,10 @@ class Form extends React.Component {
 }
 
 function error() {
-    return(
-        <div className="alert alert-danger mx-5" role="alert">
-            Please Enter City And Country
-        </div>
-    )
+        return (
+            <div className="alert alert-warning error" role="alert">
+                Please Enter City And Country
+            </div>
+        )
 }
 export default Form;

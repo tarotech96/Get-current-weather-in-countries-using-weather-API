@@ -8,6 +8,7 @@
 }
 
 .cards {
+  transform: translate(2%,10%);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.5em;
   font-weight: 800;
@@ -33,6 +34,10 @@
 h4 {
   color: #E4BB2A!important;
 }
+.error {
+  width: 50%;
+  margin-left: 20%;
+}
 
 .mr-10 {
   margin: 35px 0 0 -10px;
@@ -51,6 +56,9 @@ input {
   text-align: center!important;
 }
 
+.myform {
+  transform: translate(10%,15%);
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -79,4 +87,9 @@ input {
   to {
     transform: rotate(360deg);
   }
+}
+
+
+@media only screen and (max-width: 580px) {
+
 }

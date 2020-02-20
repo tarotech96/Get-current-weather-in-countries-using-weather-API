@@ -81,20 +81,26 @@ class App extends React.Component {
 
   getWeather = async (event, data) => {
     event.preventDefault();
-    const apiURL = URL + `weather?q=${data.city},${data.country}&appid=${API_key}`;
-    const api_call = await fetch(apiURL);
-    const response = await api_call.json();
-    console.log(response);
-    this.setState({
-      city: response.name,
-      country: response.sys.country,
-      main: response.main,
-      celcius: this.calCelcius(response.main.temp),
-      temp_min: this.calCelcius(response.main.temp_min),
-      temp_max: this.calCelcius(response.main.temp_max),
-      description: response.weather[0].description
-    })
-    this.get_WeatherIcon(this.weatherIcon, response.weather[0].id)
+    if (data.city && data.country) {
+      const apiURL = URL + `weather?q=${data.city},${data.country}&appid=${API_key}`;
+      const api_call = await fetch(apiURL);
+      const response = await api_call.json();
+      console.log(response);
+      this.setState({
+        city: response.name,
+        country: response.sys.country,
+        main: response.main,
+        celcius: this.calCelcius(response.main.temp),
+        temp_min: this.calCelcius(response.main.temp_min),
+        temp_max: this.calCelcius(response.main.temp_max),
+        description: response.weather[0].description
+      })
+      this.get_WeatherIcon(this.weatherIcon, response.weather[0].id)
+    } else {
+      this.setState({
+        error: true
+      })
+    }
 
 
   }
